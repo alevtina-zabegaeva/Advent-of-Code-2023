@@ -1,6 +1,3 @@
-import re
-
-
 filename = '4.1input.txt'
 # filename = '4.1test.txt'
 
