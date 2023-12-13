@@ -1,6 +1,3 @@
-import re
-
-
 def main():
     def sums(length, total_sum):
         if length == 1:
@@ -20,7 +17,6 @@ def main():
             springs, numbers = line.strip().split()
             numbers = [int(n) for n in numbers.split(',')]
             map.append([springs, numbers])
-    # print(map)
 
     counter = []
     for springs, numbers in map:
@@ -31,7 +27,6 @@ def main():
             line_perm = ''.join(['.'*n + '#'*numbers[i] for i, n in enumerate(perm[:-1])] + ['.']*perm[-1])
             if all(a == b or a == '?' for a, b in zip(springs, line_perm)):
                 counter[-1] += 1
-    print(counter)
     print(sum(counter))
     
 
